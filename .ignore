@@ -1,5 +1,6 @@
+line-counter
 node_modules
 dist
 .next
 lock.json
-line-counter
+.git
