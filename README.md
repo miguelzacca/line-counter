@@ -8,10 +8,14 @@ Simple code line counter with nodejs. By default ignores the list in `.ignore`
 
 ## Examples
 
-```bash
-npm start ./my-project js,json,html,css # specifying extensions
-```
+Specifying extensions:
 
 ```bash
-npm start ./my-project # all files
+npm start ./my-project js,json,html,css
+```
+
+ All files:
+
+```bash
+npm start ./my-project
 ```
