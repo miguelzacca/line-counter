@@ -1,3 +1,4 @@
+import { isUtf8 } from 'node:buffer'
 import fs from 'node:fs'
 import path from 'node:path'
 
@@ -42,8 +43,10 @@ function countAllLines(files) {
   let count = 0
 
   for (const file of files) {
-    const data = fs.readFileSync(file, 'utf-8')
-    count += data.split('\n').length
+    const buf = fs.readFileSync(file)
+    if (isUtf8(buf)) {
+      count += buf.toString().split('\n').length
+    }
   }
 
   return count
